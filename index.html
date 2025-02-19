@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+ 
+  <title>Medical Center</title>
+  <script src='https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit.min.js'></script><!--opciones menu-->
+  <script src='https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit-icons.min.js'></script><!--icono menu-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"><!--banner fotter-->
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css'><!--menu-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/><!--carouse-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/><!--carouse-->
+  <script src="https://cdn.tailwindcss.com"> </script><!--barra buscar-->
+  
+</head>  
+<body>
+  
+  
+  <link rel="stylesheet" href="styles.css">
+  
+<!-- barra menu -->
+<header class="page-header uk-box-shadow-medium uk-background-default" uk-sticky>
+  <div class="uk-container uk-container-expand uk-height-1-1">
+    <nav class="uk-height-1-1" uk-navbar="dropbar: true">
+      <a href="index.html" class="uk-flex uk-flex-middle">
+        <img width="178" height="38" src="imagenes\logo.JPG" alt="forecastr logo" >
+      </a>
+
+      <ul class="uk-navbar-nav uk-navbar-center uk-visible@l">
+        <li>
+          <a href="medicamentos.html">MEDICAMENTOS</a>
+        </li>
+        <li class="multi">
+          <a href="">
+            CUIDADOS
+            <span uk-icon="icon: chevron-down"></span>
+          </a>
+
+          <div class="uk-navbar-dropdown uk-padding-remove-top uk-padding-remove-bottom" uk-dropdown="boundary: .uk-navbar-nav; boundary-align: true; pos: bottom-justify">
+            <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-3">
+              <li>
+                <img src="imagenes\cuidado.png" alt="Descripción de la imagen" style="width: 70px; height: 70px;">
+                <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
+                  <li class="uk-nav-header uk-margin-small-bottom uk-text-bold"><a href="cuidado personal.html">CUIDADO PERSONAL</a></li>
+                  <li><a href="#">Cuidado Oral</a></li>
+                  <li><a href="#">Cuidado Capilar</a></li>
+                  <li><a href="#">Aseo</a></li>
+                </ul>
+              </li>
+              <li>
+                <img src="imagenes\cuidado de la piel.jpg" alt="Descripción de la imagen" style="width: 70px; height: 70px;">
+                <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
+                  <li class="uk-nav-header uk-margin-small-bottom uk-text-bold">CUIDADO DE LA PIEL</li>
+                  <li><a href="#">Productos exlusivos</a></li>
+                  <li><a href="#">Cuidado Facial</a></li>
+                  <li><a href="#">Cuidado Corporal</a></li>
+                  <li><a href="#">Cuidado Solar</a></li>
+                </ul>
+              </li>
+              <li>
+                <img src="imagenes\cuidado del bebe.jpg" alt="Descripción de la imagen" style="width: 70px; height: 70px;">
+                <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
+                  <li class="uk-nav-header uk-margin-small-bottom uk-text-bold">CUIDADO DEL BEBE</li>
+                  <li><a href="#">Hora de Comer</a></li>
+                  <li><a href="#">Hora de Dormir</a></li>
+                  <li><a href="#">Proteccion del Bebé</a></li>
+                  <li><a href="#">Pañales y Toallitas Humedas</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="">SMART NUTRITION</a>
+        </li>
+        <li class="multi">
+          <a href="">
+            OFERTAS Y OTRAS CATEGORIAS
+            <span uk-icon="icon: chevron-down"></span>
+          </a>
+          <div class="uk-navbar-dropdown uk-padding-remove-top uk-padding-remove-bottom" uk-dropdown="boundary: .uk-navbar-nav; boundary-align: true; pos: bottom-justify">
+            <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-2">
+              <li>
+                <img src="imagenes\Oferta.png" alt="Descripción de la imagen" style="width: 70px; height: 70px;">
+                <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
+                  <li class="uk-nav-header uk-margin-small-bottom uk-text-bold">Ofertas del Mes</li>
+                  <li><a href="#">Destacado del Mes</a></li>
+                  <li><a href="#">Precio Especiales</a></li>
+                </ul>
+              </li>
+              <li>
+                <img src="imagenes\otras categorias.jpg" alt="Descripción de la imagen" style="width: 70px; height: 70px;">
+                <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
+                  <li class="uk-nav-header uk-margin-small-bottom uk-text-bold">Otras Categorias</li>
+                  <li><a href="#">Bienestar Senior</a></li>
+                  <li><a href="#">Cuidado Respiratorio</a></li>
+                  <li><a href="#">Cuidado Digestivo</a></li>
+                  <li><a href="#">Cuidado Visual</a></li>
+                  <li><a href="#">Salud Sexual</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+        
+      </ul>
+
+      <div class="uk-navbar-right">
+        <button class="uk-icon-link uk-margin-right" uk-icon="search" type="button" aria-label="Toggle Search Form" onclick="toggleSearch()"></button>
+        
+        
+        <a href="#" class="uk-icon-link uk-margin-right" uk-icon="cart" aria-label="Open Wishlist Page"></a>
+        <!--<button class="uk-margin-left uk-hidden@l" uk-toggle="target: #offcanvas" uk-icon="icon: menu" type="button" aria-label="Toggle Mobile Menu"></button>-->
+        
+
+        <a href="logueo.html" class="uk-icon-link" uk-icon="user" aria-label="User Profile"></a>
+        <button class="uk-margin-left uk-hidden@l" uk-toggle="target: #offcanvas" uk-icon="icon: menu" type="button" aria-label="Toggle Mobile Menu"></button>
+      </div>
+    </nav>
+  </div>
+  
+  <div class="offcanvas uk-hidden@l" id="offcanvas" uk-offcanvas="flip: true; overlay: true; mode: reveal">
+    <div class="uk-offcanvas-bar">
+      <button class="uk-offcanvas-close" type="button" uk-close aria-label="Close Mobile Menu"></button>
+
+      <ul class="top-menu uk-nav uk-margin-top">
+        
+          <a href="">
+            Menu
+          </a>
+          <li>
+            <a href="">MEDICAMENTOS</a>
+            </li>
+          <ul class="sub-menu uk-nav">
+            <li class="uk-nav-header uk-text-bold">CUIDADOS</li>
+            <li><a href="#">Cuidado Personal</a></li>
+            <li><a href="#">Cuidadp de la Piel</a></li>
+            <li><a href="#">Cuidado del Bebé</a></li>
+          </ul>
+          
+          <li>
+          <li>
+            <a href="">SMAR NUTRITION</a>
+            </li>
+          <ul class="sub-menu uk-nav">
+            <li class="uk-nav-header uk-text-bold">OFERTAS</li>
+            <li><a href="#">OFERTAS DEL MES</a></li>
+            <li><a href="#">PRECIO ESPECIALES</a></li>
+            </ul>
+        </li>
+        
+        
+          
+          <ul class="sub-menu uk-nav">
+            <li class="uk-nav-header uk-text-bold">OTRAS CATEGORIAS</li>
+            <li><a href="#">Bienestar Senior</a></li>
+            <li><a href="#">Cuidado Respiratorio</a></li>
+            <li><a href="#">Cuidado Digestivo</a></li>
+            <li><a href="#">Cuidado Visual</a></li>
+            <li><a href="#">Salud Sexual</a></li>
+          </ul>
+          
+      
+        <li>
+          <a href="">Resources</a>
+          <ul class="sub-menu uk-nav">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<!--cuandro de buscar-->
+<div class="container mx-auto px-6 py-4 hidden" id="search-bar">
+  <div class="relative">
+   <input class="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Search..." type="text"/>
+   <button class="absolute right-2 top-2 text-gray-500 hover:text-gray-700">
+    <i class="fas fa-search">
+    </i>
+   </button>
+  </div>
+ </div>
+
+ <script>
+  function toggleSearch() {
+   const searchBar = document.getElementById('search-bar');
+   searchBar.classList.toggle('hidden');
+  }
+
+ </script>
+<!--fin cuandro de buscar-->
+<div class="banner" id="banner">
+  <img alt="Banner Image 1" class="active" height="300" src="imagenes\banner1.JPG" width="1200"/>
+  <img alt="Banner Image 2" height="300" src="imagenes\banner2.JPG" width="1200"/>
+  <img alt="Banner Image 3" height="300" src="imagenes\banner3.JPG" width="1200"/>
+  <div class="arrow left" id="prev">
+   &#10094;
+  </div>
+  <div class="arrow right" id="next">
+   &#10095;
+  </div>
+ </div>
+
+ <!--script banner-->
+ <script>
+  let currentIndex2 = 0;
+       const images = document.querySelectorAll('.banner img');
+       const totalImages = images.length;
+       let interval;
+
+       function showNextImage() {
+           images[currentIndex2].classList.remove('active');
+           images[currentIndex2].classList.add('previous');
+           currentIndex2 = (currentIndex2 + 1) % totalImages;
+           images[currentIndex2].classList.add('active');
+           images[currentIndex2].classList.remove('previous');
+       }
+
+       function showPreviousImage() {
+           images[currentIndex2].classList.remove('active');
+           images[currentIndex2].classList.add('previous');
+           currentIndex2 = (currentIndex2 - 1 + totalImages) % totalImages;
+           images[currentIndex2].classList.add('active');
+           images[currentIndex2].classList.remove('previous');
+       }
+
+       function startSlideshow() {
+           interval = setInterval(showNextImage, 30000);
+       }
+
+       function stopSlideshow() {
+           clearInterval(interval);
+       }
+
+       document.getElementById('banner').addEventListener('mouseover', stopSlideshow);
+       document.getElementById('banner').addEventListener('mouseout', startSlideshow);
+       document.getElementById('next').addEventListener('click', showNextImage);
+       document.getElementById('prev').addEventListener('click', showPreviousImage);
+
+       startSlideshow();
+ </script>
+
+<!--fin banner-->
+<!--carousel descuento-->
+<div class="container">
+  <h1>Productos Destacados</h1>
+  <div class="carousel">
+      <div class="carousel-inner">
+          <div class="product-card">
+              <div class="badge">RX</div>
+              <img alt="Allegra 180 Mg 10 Tabletas Recubiertas" src="https://storage.googleapis.com/a1aa/image/pFZAefLQepahXIYFq1za7ddZZnZcpZdkKDx0JfQfCXypGy6eE.jpg"/>
+              <div class="brand">OPELLA HEALTHCARE COLOMBI...</div>
+              <div class="name">Allegra 180 Mg 10 Tabletas Recubiertas</div>
+              <div class="price">119.900</div>
+              <div class="pum">PUM: $ 11,990.00 TAB</div>
+              <button class="add-to-cart">AGREGAR</button>
+          </div>
+          <div class="product-card">
+              <img alt="Allegra 120 Mg Caja Con 10 Tabletas Recubiertas" src="https://storage.googleapis.com/a1aa/image/l7dLexr0sZyPWKf9jrpD8vLg6MNZ5oL1zTevRs5lN6cphsunA.jpg"/>
+              <div class="brand">OPELLA HEALTHCARE COLOMBI...</div>
+              <div class="name">Allegra 120 Mg Caja Con 10 Tabletas Recubiertas</div>
+              <div class="old-price">$ 67.300</div>
+              <div class="new-price">53.840 Ahora</div>
+              <div class="pum">PUM: $ 6,730.00 TAB</div>
+              <button class="add-to-cart">AGREGAR</button>
+          </div>
+          <div class="product-card">
+              <div class="discount">Precios Bajos</div>
+              <img alt="Allegra Pediátrico 30 Mg / 5 Ml Frasco Con 150 Ml" src="https://storage.googleapis.com/a1aa/image/hmVnBNn5VyZPIp5TwoR9UDX9erQCliNe7Hn7fTQf3IWJDZdPB.jpg"/>
+              <div class="brand">OPELLA HEALTHCARE COLOMBI...</div>
+              <div class="name">Allegra Pediátrico 30 Mg / 5 Ml Frasco Con 150 Ml</div>
+              <div class="old-price">$ 84.900</div>
+              <div class="new-price">67.920 Ahora</div>
+              <div class="pum">PUM: $ 566.00 Ml</div>
+              <button class="add-to-cart">AGREGAR</button>
+          </div>
+          <div class="product-card">
+              <div class="discount">-20%</div>
+              <img alt="Gelicart Advance Caja Con 30 Sobres Con 20 G C/U" src="https://storage.googleapis.com/a1aa/image/itD7xFJ54hIIPdGkI547ezMrFoMgJQdCPN7MzDdXqfXxQW3TA.jpg"/>
+              <div class="brand">OPELLA HEALTHCARE COLOMBI...</div>
+              <div class="name">Precio Especial Gelicart Advance Caja Con 30 Sobres Con 20 G C/U</div>
+              <div class="old-price">$ 146.600</div>
+              <div class="new-price">117.280</div>
+              <div class="pum">PUM: $ 4,886.67 SOB</div>
+              <button class="out-of-stock">NO DISPONIBLE</button>
+          </div>
+          <div class="product-card">
+              <div class="badge">RX</div>
+              <img alt="Ibuprofeno 400 Mg 20 Tabletas" src="https://storage.googleapis.com/a1aa/image/hxjFDGtgXkaJA9ARU4geMfcYOPiuAQHuDE3Vf8eqI1T1GadPB.jpg"/>
+              <div class="brand">GENÉRICO</div>
+              <div class="name">Ibuprofeno 400 Mg 20 Tabletas</div>
+              <div class="price">15.000</div>
+              <div class="pum">PUM: $ 750.00 TAB</div>
+              <button class="add-to-cart">AGREGAR</button>
+          </div>
+          <div class="product-card">
+              <div class="discount">-10%</div>
+              <img alt="Paracetamol 500 Mg 10 Tabletas" src="https://storage.googleapis.com/a1aa/image/P4xgYs5syfXxKS5lGffh1DxVSL6tmfynJmqmC6Gkvd19GadPB.jpg"/>
+              <div class="brand">GENÉRICO</div>
+              <div class="name">Paracetamol 500 Mg 10 Tabletas</div>
+              <div class="old-price">$ 5.000</div>
+              <div class="new-price">4.500 Ahora</div>
+              <div class="pum">PUM: $ 450.00 TAB</div>
+              <button class="add-to-cart">AGREGAR</button>
+          </div>
+          <div class="product-card">
+              <div class="discount">-15%</div>
+              <img alt="Amoxicilina 500 Mg 12 Cápsulas" src="https://storage.googleapis.com/a1aa/image/SXXMqjhZoxrOA1FJY7RG4sTFRpG88sTQwhG901l7TUjbo19E.jpg"/>
+              <div class="brand">GENÉRICO</div>
+              <div class="name">Amoxicilina 500 Mg 12 Cápsulas</div>
+              <div class="old-price">$ 12.000</div>
+              <div class="new-price">10.200 Ahora</div>
+              <div class="pum">PUM: $ 850.00 CAP</div>
+              <button class="add-to-cart">AGREGAR</button>
+          </div>
+          <div class="product-card">
+              <div class="badge">RX</div>
+              <img alt="Loratadina 10 Mg 10 Tabletas" src="https://storage.googleapis.com/a1aa/image/WtgfrU55AC2fuk1re10CRPcqPmrPSI7oDm7D9rfKPYHvGadPB.jpg"/>
+              <div class="brand">GENÉRICO</div>
+              <div class="name">Loratadina 10 Mg 10 Tabletas</div>
+              <div class="price">8.000</div>
+              <div class="pum">PUM: $ 800.00 TAB</div>
+              <button class="add-to-cart">AGREGAR</button>
+          </div>
+      </div>
+      <div class="carousel-controls">
+          <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+          <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+  </div>
+</div>
+<style>
+
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+  }
+  h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: #333;
+  }
+  .carousel {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+  }
+  .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease;
+  }
+  .product-card {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+      width: 260px; /* Adjusted width to fit 4 items in the container */
+      padding: 30px; /* Set padding to match the screenshot */
+      text-align: center;
+      position: relative;
+      margin: 0 15px; /* Set margin to match the screenshot */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+  }
+  .product-card:hover {
+      transform: translateY(-10px);
+  }
+  .product-card img {
+    
+      max-width: 100%;
+      height: 140px; /* Set height to match the screenshot */
+      border-radius: 10px;
+      margin-bottom: 15px; /* Set margin-bottom to match the screenshot */
+  }
+  .product-card .badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #00bfa5;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+  }
+  .product-card .discount {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ff4081;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 15px;
+  }
+  .product-card .brand {
+      font-size: 12px; /* Set font-size to match the screenshot */
+      color: #999;
+      margin: 10px 0;
+  }
+  .product-card .name {
+      font-size: 16px; /* Set font-size to match the screenshot */
+      font-weight: bold;
+      margin: 10px 0;
+      color: #333;
+  }
+  .product-card .price {
+      font-size: 20px; /* Set font-size to match the screenshot */
+      color: #333;
+      margin: 10px 0;
+  }
+  .product-card .old-price {
+      font-size: 14px; /* Set font-size to match the screenshot */
+      color: #999;
+      text-decoration: line-through;
+  }
+  .product-card .new-price {
+      font-size: 20px; /* Set font-size to match the screenshot */
+      color: #ff4081;
+  }
+  .product-card .pum {
+      font-size: 12px; /* Set font-size to match the screenshot */
+      color: #999;
+      margin: 10px 0;
+  }
+  .product-card .add-to-cart {
+      background-color: #00bfa5;
+      color: #fff;
+      padding: 10px 20px; /* Set padding to match the screenshot */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px; /* Set font-size to match the screenshot */
+      margin-top: auto;
+      transition: background-color 0.3s ease;
+  }
+  .product-card .add-to-cart:hover {
+      background-color: #009688;
+  }
+  .product-card .out-of-stock {
+      background-color: #999;
+      color: #fff;
+      padding: 10px 20px; /* Set padding to match the screenshot */
+      border: none;
+      border-radius: 5px;
+      font-size: 16px; /* Set font-size to match the screenshot */
+      margin-top: auto;
+  }
+  .carousel-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+  }
+  .carousel-controls button {
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+  }
+  .carousel-controls button:hover {
+      background-color: rgba(0, 0, 0, 0);
+  }
+</style>
+<script>
+  const carouselInner = document.querySelector('.carousel-inner');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  let currentIndex = 0;
+  const itemsToShow = 4; // Show 4 items at a time
+  const totalItems = 8; // Total number of items to show
+  let clickCount = 0; // Counter for next button clicks
+
+  prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+          currentIndex--;
+      } else {
+          currentIndex = totalItems - 1;
+      }
+      updateCarousel();
+  });
+
+  nextBtn.addEventListener('click', () => {
+      clickCount++;
+      if (clickCount >= 3) {
+          currentIndex = 0;
+          clickCount = 0;
+      } else {
+          if (currentIndex < totalItems - 1) {
+              currentIndex++;
+          } else {
+              currentIndex = 0;
+          }
+      }
+      updateCarousel();
+  });
+
+  function updateCarousel() {
+      const offset = -currentIndex * (carouselInner.children[0].offsetWidth + 20); // Adjusted offset for increased width and margin
+      carouselInner.style.transform = `translateX(${offset}px)`;
+  }
+
+  // Auto slide every 30 seconds
+  setInterval(() => {
+      if (currentIndex < totalItems - 1) {
+          currentIndex++;
+      } else {
+          currentIndex = 0;
+      }
+      updateCarousel();
+  }, 20000); // 20000 milliseconds = 30 seconds
+</script>
+<!--fin carousel descuentos-->
+<!--footer-->
+<footer class="bg-white-800 text-black py-8">
+  <div class="container mx-auto px-4">
+   <div class="grid grid-cols-5 gap-4">
+    <div>
+     <h2 class="font-bold text-lg mb-4">
+      BENEFICIOS
+     </h2>
+     <ul>
+      <li class="mb-2">
+       Beneficios Exclusivos
+      </li>
+      <li class="mb-2">
+       Convenios
+      </li>
+      <li class="mb-2">
+       Catálogo Comercial
+      </li>
+      <li class="mb-2">
+       Cliente azul
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h2 class="font-bold text-lg mb-4">
+      CONÓCENOS
+     </h2>
+     <ul>
+      <li class="mb-2">
+       Quiénes Somos
+      </li>
+      <li class="mb-2">
+       Promesa de Valor
+      </li>
+      <li class="mb-2">
+       Contáctanos
+      </li>
+      <li class="mb-2">
+       Blog
+      </li>
+      <li class="mb-2">
+       Vive Consentido
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h2 class="font-bold text-lg mb-4">
+      SERVICIOS
+     </h2>
+     <ul>
+      <li class="mb-2">
+       Domicilios
+      </li>
+      <li class="mb-2">
+       Horarios Domicilios
+      </li>
+      <li class="mb-2">
+       Puntos de Venta
+      </li>
+      <li class="mb-2">
+       Paso a Paso Compra en la Web
+      </li>
+      <li class="mb-2">
+       Llámanos, separa y recoge
+      </li>
+      <li class="mb-2">
+       Nuestras marcas
+      </li>
+      <li class="mb-2">
+       Ventas Institucionales
+      </li>
+      <li class="mb-2">
+       Seguimiento a tu Pedido
+      </li>
+      <li class="mb-2">
+       Envios Nacionales
+      </li>
+      <li class="mb-2">
+       Secretarías de salud
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h2 class="font-bold text-lg mb-4">
+      TÉRMINOS
+     </h2>
+     <ul>
+      <li class="mb-2">
+       Términos y Condiciones Droguerías Cafam
+      </li>
+      <li class="mb-2">
+       Autorización Tratamiento Datos Personales
+      </li>
+      <li class="mb-2">
+       Protección de Datos
+      </li>
+      <li class="mb-2">
+       Reglamento Descuentos y Promociones
+      </li>
+      <li class="mb-2">
+       Reversión Pago Electrónico
+      </li>
+      <li class="mb-2">
+       Superintendencia de Industria y Comercio
+      </li>
+      <li class="mb-2">
+       Uso seguro de medicamentos
+      </li>
+      <li class="mb-2">
+       Términos y condiciones domicilios
+      </li>
+      <li class="mb-2">
+       dispensación EPS
+      </li>
+      <li class="mb-2">
+       PQRS
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h2 class="font-bold text-lg mb-4">
+      SÍGUENOS
+     </h2>
+     <div class="flex space-x-4 mb-4">
+      <a class="text-white text-2xl" href="#">
+       <i class="fab fa-facebook">
+       </i>
+      </a>
+      <a class="text-white text-2xl" href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+     </div>
+     <h2 class="font-bold text-lg mb-4">
+      DESCARGA NUESTRA APP
+     </h2>
+     <div class="flex space-x-4">
+      <a href="#">
+       <img alt="Google Play Store" height="50" src="imagenes\footer\play-store-logo.png" width="150"/>
+      </a>
+      <a href="#">
+       <img alt="Apple App Store" height="50" src="imagenes\footer\app-store-icon-.jpg" width="150"/>
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="mt-8 flex justify-between items-center">
+    <div class="flex space-x-4">
+     <img alt="Logo 1" height="50" src="imagenes\footer\pse.jfif" width="50"/>
+     <img alt="Logo 2" height="50" src="imagenes\footer\Mastercard.png" width="50"/>
+     <img alt="Logo 3" height="50" src="imagenes\footer\visa.jfif" width="50"/>
+     <img alt="Logo 4" height="50" src="imagenes\footer\maericanexpress.jfif" width="50"/>
+     <img alt="Logo 5" height="50" src="imagenes\footer\vavi plata.png" width="50"/>
+     <img alt="Logo 6" height="50" src="imagenes\footer\nequi.jpg" width="50"/>
+     
+  
+ </footer>
+</body>
+</html>

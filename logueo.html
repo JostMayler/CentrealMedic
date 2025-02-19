@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+ 
+  <title>Medical Center</title>
+  <script src='https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit.min.js'></script><!--opciones menu-->
+  <script src='https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit-icons.min.js'></script><!--icono-->
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css'><!--menu-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  
+  
+  
+
+</head>  
+<head>
+  <link rel="stylesheet" href="styles.css">
+<body>
+
+
+  
+<!-- barra menu -->
+<header class="page-header uk-box-shadow-medium uk-background-default" uk-sticky>
+  <div class="uk-container uk-container-expand uk-height-1-1">
+    <nav class="uk-height-1-1" uk-navbar="dropbar: true">
+      <a href="index.html" class="uk-flex uk-flex-middle">
+        <img width="178" height="38" src="imagenes\logo.JPG" alt="forecastr logo">
+      </a>
+
+      <ul class="uk-navbar-nav uk-navbar-center uk-visible@l">
+        <li>
+          <a href="medicamentos.html">MEDICAMENTOS</a>
+        </li>
+        <li class="multi">
+          <a href="">
+            CUIDADOS
+            <span uk-icon="icon: chevron-down"></span>
+          </a>
+
+          <div class="uk-navbar-dropdown uk-padding-remove-top uk-padding-remove-bottom" uk-dropdown="boundary: .uk-navbar-nav; boundary-align: true; pos: bottom-justify">
+            <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-3">
+              <li>
+                <a href="cuidado personal.html">
+                <img src="imagenes\cuidado.png" alt="Descripción de la imagen" style="width: 70px; height: 70px;"></a>
+                <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
+                  <li class=" uk-margin-small-bottom uk-text-bold"><a href="cuidado personal.html">CUIDADO PERSONAL</a></li>
+                  
+                  <li><a href="#">Cuidado Oral</a></li>
+                  <li><a href="#">Cuidado Capilar</a></li>
+                  <li><a href="#">Aseo</a></li>
+                
+                </ul>
+              </li>
+              <li>
+                <img src="imagenes\cuidado de la piel.jpg" alt="Descripción de la imagen" style="width: 70px; height: 70px;">
+                <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
+                  <li class="uk-nav-header uk-margin-small-bottom uk-text-bold">CUIDADO DE LA PIEL</li>
+                  <li><a href="#">Productos exlusivos</a></li>
+                  <li><a href="#">Cuidado Facial</a></li>
+                  <li><a href="#">Cuidado Corporal</a></li>
+                  <li><a href="#">Cuidado Solar</a></li>
+                </ul>
+              </li>
+              <li>
+                <img src="imagenes\cuidado del bebe.jpg" alt="Descripción de la imagen" style="width: 70px; height: 70px;" >
+                
+                <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
+                  <li class="uk-nav-header uk-margin-small-bottom uk-text-bold">CUIDADO DEL BEBE</li>
+                  <li><a href="#">Hora de Comer</a></li>
+                  <li><a href="#">Hora de Dormir</a></li>
+                  <li><a href="#">Proteccion del Bebé</a></li>
+                  <li><a href="#">Pañales y Toallitas Humedas</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="">SMART NUTRITION</a>
+        </li>
+        <li class="multi">
+          <a href="">
+            OFERTAS Y OTRAS CATEGORIAS
+            <span uk-icon="icon: chevron-down"></span>
+          </a>
+          <div class="uk-navbar-dropdown uk-padding-remove-top uk-padding-remove-bottom" uk-dropdown="boundary: .uk-navbar-nav; boundary-align: true; pos: bottom-justify">
+            <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-2">
+              <li>
+                <img src="imagenes\Oferta.png" alt="Descripción de la imagen" style="width: 70px; height: 70px;">
+                <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
+                  <li class="uk-nav-header uk-margin-small-bottom uk-text-bold">Ofertas del Mes</li>
+                  <li><a href="#">Destacado del Mes</a></li>
+                  <li><a href="#">Precio Especiales</a></li>
+                </ul>
+              </li>
+              <li>
+                <img src="imagenes\otras categorias.jpg" alt="Descripción de la imagen" style="width: 70px; height: 70px;">
+                <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
+                  <li class="uk-nav-header uk-margin-small-bottom uk-text-bold">Otras Categorias</li>
+                  <li><a href="#">Bienestar Señor</a></li>
+                  <li><a href="#">Cuidado Respiratorio</a></li>
+                  <li><a href="#">Cuidado Digestivo</a></li>
+                  <li><a href="#">Cuidado Visual</a></li>
+                  <li><a href="#">Salud Sexual</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+        
+      </ul>
+
+      <div class="uk-navbar-right">
+        
+        
+        <a href="#" class="uk-icon-link uk-margin-right" uk-icon="cart" aria-label="Open Wishlist Page"></a>
+        
+
+        <a href="#" class="uk-icon-link" uk-icon="user" aria-label="User Profile"></a>
+        <button class="uk-margin-left uk-hidden@l" uk-toggle="target: #offcanvas" uk-icon="icon: menu" type="button" aria-label="Toggle Mobile Menu"></button>
+      </div>
+    </nav>
+  </div>
+  
+  <div class="offcanvas uk-hidden@l" id="offcanvas" uk-offcanvas="flip: true; overlay: true; mode: reveal">
+    <div class="uk-offcanvas-bar">
+      <button class="uk-offcanvas-close" type="button" uk-close aria-label="Close Mobile Menu"></button>
+
+      <ul class="top-menu uk-nav uk-margin-top">
+        
+          <a href="">
+            Menu
+          </a>
+          <li>
+            <a href="">MEDICAMENTOS</a>
+            </li>
+          <ul class="sub-menu uk-nav">
+            <li class="uk-nav-header uk-text-bold">CUIDADOS</li>
+            <li><a href="#">Cuidado Personal</a></li>
+            <li><a href="#">Cuidadp de la Piel</a></li>
+            <li><a href="#">Cuidado del Bebé</a></li>
+          </ul>
+          
+          <li>
+          <li>
+            <a href="">SMAR NUTRITION</a>
+            </li>
+          <ul class="sub-menu uk-nav">
+            <li class="uk-nav-header uk-text-bold">OFERTAS</li>
+            <li><a href="#">OFERTAS DEL MES</a></li>
+            <li><a href="#">PRECIO ESPECIALES</a></li>
+            </ul>
+        </li>
+        
+        
+          
+          <ul class="sub-menu uk-nav">
+            <li class="uk-nav-header uk-text-bold">OTRAS CATEGORIAS</li>
+            <li><a href="#">Bienestar Senior</a></li>
+            <li><a href="#">Cuidado Respiratorio</a></li>
+            <li><a href="#">Cuidado Digestivo</a></li>
+            <li><a href="#">Cuidado Visual</a></li>
+            <li><a href="#">Salud Sexual</a></li>
+          </ul>
+          
+      
+        <li>
+          <a href="">Resources</a>
+          <ul class="sub-menu uk-nav">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</header>
+
+
+
+  <link rel="stylesheet" href="stylelogueo.css">
+<body>
+<!--producto-->
+<div class="container" id="container">
+  <div class="form-container sign-up">
+      <form>
+          <h1>Crear Cuenta</h1>
+          <div class="social-icons">
+              <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <span>o utilice su correo electrónico para registrarse</span>
+          <input type="text" placeholder="Nombre Completo">
+          <input type="email" placeholder="Correo Electrónico">
+          <input type="password" placeholder="Clave">
+          <button>registrarse</button>
+      </form>
+  </div>
+  <div class="form-container sign-in">
+      <form>
+          <h1>Iniciar sesión</h1>
+          <div class="social-icons">
+              <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <span>o utilice su contraseña de correo electrónico</span>
+          <input type="email" placeholder="Email">
+          <input type="password" placeholder="Password">
+          <a href="#">¿Ha olvidado su contraseña?</a>
+          <button>Iniciar sesión</button>
+      </form>
+  </div>
+  <div class="toggle-container">
+      <div class="toggle">
+          <div class="toggle-panel toggle-left">
+              <h1> ¡Crear una cuenta es fácil y rápido! </h1>
+              <p>Haz clic en el botón "Registrarse" y empieza a disfrutar de todas las ventajas de ser parte de Farmacia Medical Center.</p>
+              <p>  💊 Cuidamos de ti, hoy y siempre. 💊</p>
+              <button class="hidden" id="login">Inicio de sesión</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+              <h1>¡Hola! 👋 </h1>
+              <p>Bienvenido a Farmacia Medical Center. 😊
+                Inicia sesión para disfrutar de todas las ventajas que tenemos para ti. 🛒</p>              
+               <p> ¡Te esperamos! 💖</p>
+                
+              <button class="hidden" id="register">Inscríbete</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script src="scriptlogueo.js"></script>
+</head>
+</body>
+</html>
